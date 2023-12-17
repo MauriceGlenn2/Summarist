@@ -221,9 +221,11 @@ button:disabled {
   margin-bottom: 16px;
 }
 
-.statistics__heading--active {
+.highlight{
   color: #2bd97c;
 }
+
+
 
 .statistics__heading:last-child {
   margin-bottom: 0;
