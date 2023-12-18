@@ -22,20 +22,12 @@ export default function Landing() {
     return () => clearInterval(interval);
   }, []);
 
-  // ...
-  // <div className={`statistics__heading ${highlightedIndex === 0 ? 'highlight' : ''}`}>
-  //   Enhance your knowledge
-  // </div>
-  // <div className={`statistics__heading ${highlightedIndex === 1 ? 'highlight' : ''}`}>
-  //   Achieve greater success
-  // </div>
-
   return (
     <div className="body">
       <nav className="nav">
         <div className="nav__wrapper">
           <figure className="nav__img--mask">
-            <img className="nav__img" src="" alt="logo" />
+            <img className="nav__img" src="/sLogo.png" alt="logo" />
           </figure>
           <ul className="nav__list--wrapper">
             <li className="nav__list nav__list--login">Login</li>
@@ -64,7 +56,7 @@ export default function Landing() {
                 <button className="btn home__cta--btn">Login</button>
               </div>
               <figure className="landing__image--mask">
-                <img src="" alt="landing" />
+                <img src="/ladyLooking.png" alt="landing" />
               </figure>
             </div>
           </div>
