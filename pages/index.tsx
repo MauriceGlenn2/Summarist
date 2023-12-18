@@ -1,13 +1,15 @@
 import Landing from '@/components/Landing'
 import SearchBar from '@/components/SearchBar'
 import SideBar from '@/components/SideBar'
+import ForYou from './ForYou'
 
 export default function Home() {
   return (
     <>
-    <SearchBar />
+    {/* <SearchBar /> */}
       {/* <SideBar /> */}
       {/* <Landing /> */}
+      <ForYou />
     </>
   )
 }
