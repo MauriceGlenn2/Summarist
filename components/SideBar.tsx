@@ -8,13 +8,12 @@ import {
   QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import React from "react";
-import SearchBar from "./SearchBar";
 
 
 export default function SideBar() {
   return (
     <>
-      <div className=" lg:block absolute bg-[#f7faf9] w-[200px] min-w-[200px] top-0 left-0 h-screen">
+      <div className="hidden sticky lg:block relative bg-[#f7faf9] w-[200px] min-w-[200px] top-0 left-0 h-screen">
         <div className="mt-[20px] px-[16px]">
           <img src="/sLogo.png" alt="" />
         </div>
