@@ -95,6 +95,16 @@ button:disabled {
 }
 
 /* NAVBAR */
+.open {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.closed {
+  transform: translateX(-200px); /* Adjust the value based on your sidebar width */
+  transition: transform 0.3s ease;
+}
+
 .nav {
   height: 80px;
 }

@@ -1,23 +1,27 @@
 import SearchBar from "@/components/SearchBar";
 import SideBar from "../components/SideBar";
 import { ClockIcon, PlayCircleIcon, StarIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 export default function ForYou() {
+  const [open, setOpen] = useState(false);
+
+ 
   return (
     <>
       <div className="relative flex">
         <div className="flex z-10 top-0 left-0">
-          <SideBar />
+          <SideBar  isOpen={open}/>
         </div>
         <div className="flex flex-col w-full">
-          <SearchBar />
-          <div className="max-w-[1070px] w-full pl-[24px] sm:mx-auto flex">
+          <SearchBar setOpen={setOpen} />
+          <div className="max-w-[1070px] w-full pl-[24px]  sm:mx-auto flex">
             <div className="py-[40px] w-full">
               <div className="max-w-[1070px] w-full">
                 <h1 className="text-[22px] font-bold mb-[16px]">
                   Selected just for you
                 </h1>
-                <div className="w-[90%] flex bg-[#fbefd6] mb-6">
+                <div className="w-[80%] flex bg-[#fbefd6] mb-6">
                   <a
                     className="lg:flex flex-col lg:flex-row gap-6 w-[100%] justify-between p-[24px] text-[#032b41] text-left"
                     href=""

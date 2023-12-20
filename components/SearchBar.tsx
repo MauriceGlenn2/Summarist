@@ -1,7 +1,18 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
+import React, { Dispatch, FC, SetStateAction } from "react";
 
-export default function SearchBar() {
+interface Props {
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const SearchBar: FC<Props> = ({ setOpen }) => {
+  
+  function handleClick() {
+    console.log("clicked");
+    setOpen(true);
+  }
+
   return (
     <>
       <div className="border-b-2 border-[#e1e7ea] h-[80px] flex">
@@ -13,13 +24,15 @@ export default function SearchBar() {
                 type="text"
                 placeholder="Search for books"
               />
-              <div className="flex absolute items-center h-full justify-end border-l-2 pl-[8px] right-[8px]">
+              <div className=" flex absolute items-center h-full justify-end border-l-2 pl-[8px] right-[8px]">
                 <MagnifyingGlassIcon className="w-[24px] h-[24px]" />
                 {/* <XMarkIcon className="w-[24px] h-[24px]" /> */}
               </div>
             </div>
-            <div className="items-center justify-center cursor-pointer hidden">
-              <Bars3Icon className="w-[24px] h-[24px]" />
+            <div className="items-center justify-center flex cursor-pointer  sm:hidden">
+              <Bars3Icon
+              onClick={handleClick}
+              className="w-[24px] h-[24px]" />
             </div>
           </div>
         </div>
@@ -27,3 +40,5 @@ export default function SearchBar() {
     </>
   );
 }
+
+export default SearchBar;
