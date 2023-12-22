@@ -14,7 +14,7 @@ export default function ForYou() {
           <SideBar  isOpen={open}/>
         </div>
         <div className="flex flex-col w-full">
-          <SearchBar setOpen={setOpen} />
+        
           <div className="max-w-[1070px] w-full pl-[24px]  sm:mx-auto flex">
             <div className="py-[40px] w-full">
               <div className="max-w-[1070px] w-full">
