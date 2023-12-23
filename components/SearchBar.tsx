@@ -2,17 +2,12 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import React, { Dispatch, FC, SetStateAction } from "react";
 
-interface Props {
-  setOpen: Dispatch<SetStateAction<boolean>>;
+interface SearchBarProps {
+  onButtonClick: () => void;
 }
 
-const SearchBar: FC<Props> = ({ setOpen }) => {
+const SearchBar: FC<SearchBarProps> = ({ onButtonClick }) => {
   
-  function handleClick() {
-    console.log("clicked");
-    setOpen(true);
-  }
-
   return (
     <>
       <div className="border-b-2 border-[#e1e7ea] h-[80px] flex">
@@ -31,7 +26,7 @@ const SearchBar: FC<Props> = ({ setOpen }) => {
             </div>
             <div className="items-center justify-center flex cursor-pointer  sm:hidden">
               <Bars3Icon
-              onClick={handleClick}
+              onClick={onButtonClick}
               className="w-[24px] h-[24px]" />
             </div>
           </div>

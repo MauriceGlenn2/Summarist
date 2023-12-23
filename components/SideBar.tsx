@@ -8,19 +8,22 @@ import {
   QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import React, { FC } from "react";
-import SearchBar from "./SearchBar";
 
 interface SideBarProps {
-
-  isOpen: boolean;
+  isSidebarOpen: boolean;
 }
-const SideBar: FC<SideBarProps> = ({ isOpen }) => {
-  console.log("Is Sidebar open?", isOpen);
+
+const SideBar: FC<SideBarProps> = ({ isSidebarOpen }: SideBarProps) => {
+   console.log("isSidebarOpen (in SideBar):", isSidebarOpen);
   return (
     <>
       <div
-        className="hidden sticky lg:block bg-[#f7faf9] 
-  w-[200px] min-w-[200px] top-0 left-0 h-screen"
+        className={`bg-[#f7faf9] lg:w-[200px] lg:min-w-[200px] top-0 left-0 h-screen
+          transform transition-transform ease-in duration-300 absolute lg:relative z-50${
+            isSidebarOpen
+              ? "translate-x-0 lg:block w-[270px] "
+              : "-translate-x-full hidden lg:hidden "
+          }`}
       >
         <div className="mt-[20px] px-[16px]">
           <img src="/sLogo.png" alt="" />
@@ -100,8 +103,7 @@ const SideBar: FC<SideBarProps> = ({ isOpen }) => {
           </a>
         </div>
       </div>
-
-      
+      {/* <div className="hidden lg:block"><p>Hello there</p></div> */}
     </>
   );
 }

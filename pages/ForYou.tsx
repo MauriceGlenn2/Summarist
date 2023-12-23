@@ -4,16 +4,17 @@ import { ClockIcon, PlayCircleIcon, StarIcon } from "@heroicons/react/24/outline
 import { useState } from "react";
 
 export default function ForYou() {
-  const [open, setOpen] = useState(false);
+  
 
  
   return (
     <>
-      <div className="relative flex">
-        <div className="flex z-10 top-0 left-0">
-          <SideBar  isOpen={open}/>
-        </div>
-        <div className="flex flex-col w-full">
+      {/* <div className="relative flex"> */}
+        {/* <SearchBar isOpen={open} setOpen={setOpen} /> */}
+        {/* <div className="flex z-10 top-0 left-0"> */}
+          {/* <SideBar  isOpen={open}/> */}
+        {/* </div> */}
+        <div className="flex flex-col w-full m-auto">
         
           <div className="max-w-[1070px] w-full pl-[24px]  sm:mx-auto flex">
             <div className="py-[40px] w-full">
@@ -324,7 +325,7 @@ export default function ForYou() {
             </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

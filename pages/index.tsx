@@ -1,17 +1,33 @@
-import Landing from '@/components/Landing'
-import SearchBar from '@/components/SearchBar'
-import SideBar from '@/components/SideBar'
-import ForYou from './ForYou'
-import Book from './book'
+import Landing from "@/components/Landing";
+import SearchBar from "@/components/SearchBar";
+import SideBar from "@/components/SideBar";
+import ForYou from "./ForYou";
 
-export default function Home() {
+import { FC, useState } from "react";
+
+interface HomeProps {}
+
+const Home: FC<HomeProps> = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  function toggleSidebar() {
+    setIsSidebarOpen(!isSidebarOpen);
+  }
+
+  console.log("isSideBaropen:", isSidebarOpen);
   return (
     <>
-    {/* <SearchBar /> */}
-      {/* <SideBar /> */}
+      <SearchBar onButtonClick={toggleSidebar} />
+      <div className="flex">
+        <SideBar isSidebarOpen={isSidebarOpen} />
+
+        <ForYou />
+
+        {/* <Book /> */}
+      </div>
+
       {/* <Landing /> */}
-      <ForYou />
-      {/* <Book /> */}
     </>
-  )
-}
+  );
+};
+export default Home;
