@@ -24,7 +24,7 @@ const SearchBar: FC<SearchBarProps> = ({ onButtonClick }) => {
                 {/* <XMarkIcon className="w-[24px] h-[24px]" /> */}
               </div>
             </div>
-            <div className="items-center justify-center flex cursor-pointer  sm:hidden">
+            <div className="items-center justify-center flex cursor-pointer sm:hidden">
               <Bars3Icon
               onClick={onButtonClick}
               className="w-[24px] h-[24px]" />

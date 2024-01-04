@@ -4,6 +4,7 @@ import SideBar from "@/components/SideBar";
 import ForYou from "./ForYou";
 
 import { FC, useState } from "react";
+import Book from "./Book";
 
 interface HomeProps {}
 
@@ -21,9 +22,9 @@ const Home: FC<HomeProps> = () => {
       <div className="flex">
         <SideBar isSidebarOpen={isSidebarOpen} />
 
-        <ForYou />
+        {/* <ForYou /> */}
 
-        {/* <Book /> */}
+        <Book />
       </div>
 
       {/* <Landing /> */}
